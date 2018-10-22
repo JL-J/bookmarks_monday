@@ -1,0 +1,29 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/judithlloyd-jones/Desktop/Projects/bookmarks_monday/spec/bookmarks_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/judithlloyd-jones/Desktop/Projects/bookmarks_monday/spec/features/index_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1540223178
+  }
+}
