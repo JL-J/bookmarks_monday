@@ -3,22 +3,20 @@ require './lib/bookmarks'
 require 'pg'
 
 class BookmarkManager < Sinatra::Base
-  before do
-    @bookmarks = Bookmarks.instance
-  end
+
 
   get '/' do
-    @bookmarks = Bookmarks.create
     erb :index
   end
 
   get '/bookmarks' do
-    @bookmarks = Bookmarks.all
+    @bookmarks = Bookmark.all
     erb :bookmarks
   end
 
   post '/bookmark' do
-    @bookmarks.add(params[:url])
+    p "added a new bookmark"
+    Bookmark.add(params[:title], params[:url])
     redirect '/'
   end
 
