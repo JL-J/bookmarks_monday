@@ -15,3 +15,8 @@ User story #1:
 Domain model:
 Noun: bookmark(s), list
 Verb: see
+
+User story #2:
+- As a user
+- So that I can return to my favourite website
+- I'd like to be able to add a bookmark

@@ -3,14 +3,13 @@ require './lib/bookmarks'
 require 'pg'
 
 class BookmarkManager < Sinatra::Base
-
   before do
     @bookmarks = Bookmarks.instance
   end
 
   get '/' do
     @bookmarks = Bookmarks.create
-    erb (:index)
+    erb :index
   end
 
   get '/bookmarks' do
@@ -18,6 +17,10 @@ class BookmarkManager < Sinatra::Base
     erb :bookmarks
   end
 
-  run! if app_file == $0
+  post '/bookmark' do
+    @bookmarks.add(params[:url])
+    redirect '/'
+  end
 
+  run! if app_file == $PROGRAM_NAME
 end
